@@ -152,7 +152,8 @@ main ()
 	 AC_MSG_RESULT(routing socket)],
 	[AC_DEFINE([HAVE_NETLINK], [1], [Define to 1 if you support the 'netlink' function.])
 	 UK_METHOD=netlink
-	 AC_MSG_RESULT(netlink)])
+	 AC_MSG_RESULT(netlink)],
+	AC_MSG_WARN([Could not check userland-kernel interface while cross-compiling]))
 AC_SUBST(UK_METHOD)
 
 dnl Checks for RFC3542
