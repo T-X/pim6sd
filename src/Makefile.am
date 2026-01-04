@@ -7,7 +7,9 @@ AM_YFLAGS         = -d
 sbin_PROGRAMS     = pim6sd
 dist_sbin_SCRIPTS = pim6stat
 
-pim6sd_SOURCES    = callout.c		callout.h			\
+pim6sd_SOURCES    = \
+		    netlink.c		netlink.h			\
+		    callout.c		callout.h			\
 		    cftoken.l		cfparse-defs.h			\
 		    cfparse.y		cfparse.h			\
 		    config.c		defs.h				\
@@ -21,8 +23,8 @@ pim6sd_SOURCES    = callout.c		callout.h			\
 		    mld6v2.c		mld6v2.h			\
 		    mld6v2_proto.c	mld6v2_proto.h			\
 		    mrt.c		mrt.h				\
-		    netlink.c		routesock.c	routesock.h	\
-		    pim6.c		pim6.h				\
+		    routesock.c						\
+		    routesock.h		pim6.c		pim6.h		\
 		    pim6_proto.c	pim6_proto.h			\
 		    route.c		route.h				\
 		    rp.c		rp.h				\
